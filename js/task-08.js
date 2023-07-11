@@ -13,6 +13,6 @@ function handleSubmit(event) {
     loginData.email = email.value;
     loginData.password = password.value;
 
-    console.log('result', loginData)
+    console.log('loginData:', loginData)
     event.currentTarget.reset();
 }
