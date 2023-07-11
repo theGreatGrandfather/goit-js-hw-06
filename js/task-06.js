@@ -1,6 +1,5 @@
 const field = document.querySelector('#validation-input');
-
-field.classList.add("invalid")
+ 
 const onFieldBlur = evt => {
     if (evt.currentTarget.value.length === Number(field.dataset.length)) {
         field.classList.remove("invalid");
