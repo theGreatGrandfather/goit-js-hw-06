@@ -1,15 +1,15 @@
 const field = document.querySelector('#validation-input');
 
-
+field.classList.add("invalid")
 const onFieldBlur = evt => {
-    const str = evt.currentTarget.value;
-
-    if (str.length === Number(field.dataset.length)) {
+    if (evt.currentTarget.value.length === Number(field.dataset.length)) {
+        field.classList.remove("invalid");
         field.classList.add("valid");
     } else {
-        field.classList.add("invalid")
+        field.classList.add("invalid");
+        field.classList.remove("valid");
     }
-
 };
+
 
 field.addEventListener('blur', onFieldBlur);
